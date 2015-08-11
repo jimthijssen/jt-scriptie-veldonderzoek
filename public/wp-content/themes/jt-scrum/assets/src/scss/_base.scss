@@ -13,10 +13,6 @@ html, body {
 html {
   box-sizing: border-box;
   overflow-y: scroll; // Force vertical scrollbar to avoid jumping if navigating from short to long page and vice versa
-
-  &.overlay-open {
-    overflow: hidden;
-  }
 }
 
 body {
@@ -26,15 +22,6 @@ body {
   font-size: $fontsize-base;
   line-height: $lineheight-base;
   min-width: 320px;
-}
-
-.container {
-  width: 90%;
-  margin: 0 5%;
-
-  .main > & {
-    padding: 30px 0;
-  }
 }
 
 //
@@ -83,11 +70,8 @@ h6, .h6 {
 // --------------------------------------------------------------------------
 
 a {
-  color: $color-link;
-  transition: color 0.25s ease;
-
   &:hover, &:focus, &:active {
-    color: $color-link-hover;
+
   }
 }
 

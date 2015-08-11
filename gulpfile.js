@@ -3,7 +3,7 @@ var gulp         = require('gulp'),
     requireDir   = require('require-dir');
 
 // Variables
-var root_path = 'public/wp-content/themes/jt-scrum';
+var root_path = 'public/wp-content/themes/jt-waterfall';
 // Source paths
 var scss_path       = root_path+'/assets/src/scss/**/*.scss',
     js_path         = root_path+'/assets/src/js/*.js',

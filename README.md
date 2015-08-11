@@ -1,7 +1,7 @@
 JT Scriptie Onderzoek
 ==
 
-This is the "Scrum" branch.
+This is the "Waterfall" branch.
 
 Gulp
 ==

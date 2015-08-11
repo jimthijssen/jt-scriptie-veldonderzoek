@@ -6,7 +6,7 @@ var gulp   = require('gulp'),
     concat = require('gulp-concat');
 
 // Variables
-var root_path = 'public/wp-content/themes/jt-scrum';
+var root_path = 'public/wp-content/themes/jt-waterfall';
 // Source paths
 var jshint_path     = root_path+'/assets/src/js/.jshintrc';
 var js_path         = root_path+'/assets/src/js/*.js';

@@ -3,47 +3,65 @@
 // ==========================================================================
 
 //
-// Background Color
-// --------------------------------------------------------------------------
-
-$bgcolor-body: #eee;
-
-//
 // Color
 // --------------------------------------------------------------------------
 
-$color-base: #333;
+$color-base: #1A1A18;
+$color-bg: #F6F6F6;
+$color-text-grey: #929292;
+$color-titles: #232323;
+
+$color-blue: #449BF7;
+$color-blue-light: #73B5FB;
+$color-blue-dark: #2079D6;
+
+$color-green: #C2E617;
+$color-green-light: #D7FA44;
+$color-green-dark: #A6CA00;
+
+$color-red: #F63647;
+$color-red-light: #F0485C;
+$color-red-dark: #D40013;
+
+$color-grey: #515151;
+$color-grey-light: #767676;
+$color-grey-dark: #323232;
+
+$color-white: #DBE3E8;
+$color-white-light: #EDF0F2;
+$color-white-dark: #A7B7C2;
 
 //
 // Font Family
 // --------------------------------------------------------------------------
 
-$font-base: Arial, sans-serif;
-$font-titles: 'Helvetica', Arial, sans-serif;
+$font-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-titles: 'Lato', sans-serif;
 
 //
 // Font Size
 // --------------------------------------------------------------------------
 
-$fontsize-base: 13px;
-$fontsize-h1: 24px;
-$fontsize-h2: 22px;
-$fontsize-h3: 20px;
-$fontsize-h4: 18px;
-$fontsize-h5: 16px;
-$fontsize-h6: 14px;
+$fontsize-base: 16px;
+$fontsize-h1: 36px;
+$fontsize-h2: 32px;
+$fontsize-h3: 28px;
+$fontsize-h4: 24px;
+$fontsize-h5: $fontsize-h4;
+$fontsize-h6: $fontsize-h4;
 
 //
 // Line Height
 // --------------------------------------------------------------------------
 
-$lineheight-base: 1.50;
+$lineheight-base: 1.9;
+$lineheight-titles: 1.2;
 
 //
 // Padding
 // --------------------------------------------------------------------------
 
-$padding-base: 15px; // Used for bottom padding on P and H1-h6 elements
+$spacing-base: 15px; // Used for bottom padding on P and H1-h6 elements
 
 //
 // Width

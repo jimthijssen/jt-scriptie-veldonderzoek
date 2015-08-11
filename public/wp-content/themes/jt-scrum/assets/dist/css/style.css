@@ -218,11 +218,11 @@ html {
 }
 
 body {
-  background-color: #eee;
-  color: #333;
-  font-family: Arial, sans-serif;
-  font-size: 13px;
-  line-height: 1.5;
+  background-color: #F6F6F6;
+  color: #1A1A18;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.9;
   min-width: 320px;
 }
 
@@ -231,32 +231,148 @@ p {
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  font-family: "Helvetica", Arial, sans-serif;
+  font-family: "Lato", sans-serif;
+  line-height: 1.2;
+  color: #232323;
   padding-bottom: 15px;
 }
 
 h1, .h1 {
-  font-size: 24px;
+  font-size: 36px;
 }
 
 h2, .h2 {
-  font-size: 22px;
+  font-size: 32px;
 }
 
 h3, .h3 {
-  font-size: 20px;
+  font-size: 28px;
 }
 
 h4, .h4 {
-  font-size: 18px;
+  font-size: 24px;
 }
 
 h5, .h5 {
-  font-size: 16px;
+  font-size: 24px;
 }
 
 h6, .h6 {
-  font-size: 14px;
+  font-size: 24px;
+}
+
+a {
+  color: #449BF7;
+  -webkit-transition: color 0.25s ease;
+  transition: color 0.25s ease;
+  -webkit-transition-property: color, background-color, border-color;
+  transition-property: color, background-color, border-color;
+}
+a:hover, a:focus {
+  color: #73B5FB;
+}
+a:active {
+  color: #2079D6;
+}
+
+.btn, input[type="submit"] {
+  background-color: transparent;
+  border: none;
+  font-family: "Lato", sans-serif;
+  line-height: 24px;
+  display: inline-block;
+  padding: 13px 33px;
+  -webkit-transition: color 0.25s ease;
+  transition: color 0.25s ease;
+  -webkit-transition-property: color, background-color, border-color;
+  transition-property: color, background-color, border-color;
+}
+
+.btn--blue, input[type="submit"], .btn--grey {
+  border-radius: 25px;
+}
+
+.btn--blue, input[type="submit"] {
+  background-color: #449BF7;
+  color: #fff;
+}
+.btn--blue:hover, input[type="submit"]:hover, .btn--blue:focus, input[type="submit"]:focus {
+  background-color: #73B5FB;
+}
+.btn--blue:active, input[type="submit"]:active {
+  background-color: #2079D6;
+}
+
+.btn--grey {
+  background-color: transparent;
+  border: solid 3px #515151;
+  color: #515151;
+}
+.btn--grey:hover, .btn--grey:focus, .btn--grey:active {
+  color: #fff;
+}
+.btn--grey:hover, .btn--grey:focus {
+  background-color: #767676;
+  border-color: #767676;
+}
+.btn--grey:active {
+  background-color: #323232;
+  border-color: #323232;
+}
+
+.btn--white {
+  background-color: transparent;
+  border: solid 3px #A7B7C2;
+  color: #A7B7C2;
+}
+.btn--white:hover, .btn--white:focus {
+  background-color: #EDF0F2;
+}
+.btn--white:active {
+  background-color: #A7B7C2;
+}
+
+ul, ol {
+  color: #929292;
+  line-height: 25px;
+  padding: 0 0 15px 30px;
+}
+
+input[type='tel'], input[type='password'], input[type='email'], input[type='text'], select, textarea {
+  background: transparent;
+  border: solid 1px #DBE3E8;
+  color: #929292;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+  padding: 13px 16px;
+  width: 100%;
+}
+input[type='tel']:focus, input[type='password']:focus, input[type='email']:focus, input[type='text']:focus, select:focus, textarea:focus {
+  border-color: #515151;
+}
+input[type='tel'].success, .success input[type='tel'], input[type='password'].success, .success input[type='password'], input[type='email'].success, .success input[type='email'], input[type='text'].success, .success input[type='text'], select.success, .success select, textarea.success, .success textarea {
+  border-color: #A6CA00;
+}
+input[type='tel'].error, .error input[type='tel'], input[type='password'].error, .error input[type='password'], input[type='email'].error, .error input[type='email'], input[type='text'].error, .error input[type='text'], select.error, .error select, textarea.error, .error textarea {
+  border-color: #D40013;
+}
+input[type='tel']:focus, input[type='tel']:active, input[type='password']:focus, input[type='password']:active, input[type='email']:focus, input[type='email']:active, input[type='text']:focus, input[type='text']:active, select:focus, select:active, textarea:focus, textarea:active {
+  outline: none;
+  box-shadow: none;
+}
+
+input[type="submit"] {
+  white-space: normal;
+}
+input[type="submit"]:focus, input[type="submit"]:active {
+  outline: none;
+  box-shadow: none;
+}
+
+textarea {
+  max-width: 100%;
 }
 
 body {

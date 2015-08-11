@@ -4,7 +4,7 @@ var gulp     = require('gulp'),
     cache    = require('gulp-cache');
 
 // Variables
-var root_path = '/public/wp-content/themes/jt-scrum';
+var root_path = 'public/wp-content/themes/jt-scrum';
 var imageOptimizationSettings = {
   optimizationLevel: 3,
   progressive: true,

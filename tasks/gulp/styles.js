@@ -6,7 +6,7 @@ var gulp         = require('gulp'),
     rename       = require('gulp-rename');
 
 // Variables
-var root_path = '/public/wp-content/themes/jt-scrum';
+var root_path = 'public/wp-content/themes/jt-scrum';
 var autoprefixerSettings = {
   browsers: ['> 5%', 'last 2 versions' ],
   cascade: false
@@ -22,7 +22,7 @@ var css_dist_path        = root_path+'/assets/dist/css';
 // Styles
 gulp.task('styles', function() {
   return gulp.src([scss_file_path, scss_file_font_path, scss_file_admin_path])
-    .pipe(sass({ loadPath: root_path, style: 'expanded', sourcemap: false, container: 'child-styles' }))
+    .pipe(sass({ loadPath: root_path, style: 'expanded', 'sourcemap=none': true, container: 'child-styles' }))
     .pipe(autoprefixer(autoprefixerSettings))
     .pipe(gulp.dest(css_dist_path))
     .pipe(rename({ suffix: '.min' }))

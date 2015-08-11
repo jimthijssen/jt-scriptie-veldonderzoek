@@ -1,6 +1,8 @@
 JT Scriptie Onderzoek
 ==
 
+This is the "Scrum" branch.
+
 Gulp
 ==
 

@@ -6,7 +6,7 @@ var gulp         = require('gulp'),
     rename       = require('gulp-rename');
 
 // Variables
-var root_path = '/public/wp-content/themes/???';
+var root_path = '/public/wp-content/themes/jt-scrum';
 var autoprefixerSettings = {
   browsers: ['> 5%', 'last 2 versions' ],
   cascade: false

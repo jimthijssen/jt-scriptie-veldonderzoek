@@ -1,0 +1,9 @@
+.env
+wp-config.php
+
+# Sass
+.sass-cache
+*.map
+
+# Gulp
+node_modules

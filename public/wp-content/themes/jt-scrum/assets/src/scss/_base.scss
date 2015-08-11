@@ -24,11 +24,18 @@ body {
   min-width: 320px;
 }
 
+.container {
+  max-width: $maxwidth-container;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
 //
 // Typograpy
 // --------------------------------------------------------------------------
 
 p {
+  margin: 0;
   padding-bottom: $spacing-base;
 }
 
@@ -41,6 +48,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   line-height: $lineheight-titles;
   color: $color-titles;
   padding-bottom: $spacing-base;
+  margin: 0;
 }
 
 h1, .h1 {
@@ -154,6 +162,7 @@ a {
 ul, ol {
   color: $color-text-grey;
   line-height: 25px;
+  margin: 0;
   padding: 0 0 $spacing-base 30px;
 }
 

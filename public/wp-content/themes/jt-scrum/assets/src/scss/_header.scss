@@ -1,3 +1,33 @@
 /* ========================================================================== *\
    Header
 \* ========================================================================== */
+
+.header {
+  background-color: #fff;
+}
+
+.header__logo {
+  float: left;
+  padding: 26px 0 25px;
+}
+
+.logo__link, .logo__image {
+  display: block;
+}
+
+/* ========================================================================== *\
+   Page Header
+\* ========================================================================== */
+
+.page-header {
+  background-color: $color-blue;
+}
+
+.page__title {
+  color: #fff;
+  font-size: 35px; // ! Different from default H1 font size
+  line-height: 40px; // ! Different from default H1 line-height
+  text-transform: uppercase;
+  padding-bottom: 0;
+  padding: 30px 0;
+}

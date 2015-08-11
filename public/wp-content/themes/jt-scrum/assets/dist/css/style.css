@@ -226,7 +226,14 @@ body {
   min-width: 320px;
 }
 
+.container {
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
 p {
+  margin: 0;
   padding-bottom: 15px;
 }
 
@@ -235,6 +242,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   line-height: 1.2;
   color: #232323;
   padding-bottom: 15px;
+  margin: 0;
 }
 
 h1, .h1 {
@@ -335,6 +343,7 @@ a:active {
 ul, ol {
   color: #929292;
   line-height: 25px;
+  margin: 0;
   padding: 0 0 15px 30px;
 }
 
@@ -442,9 +451,69 @@ body {
 /* ========================================================================== *\
    Header
 \* ========================================================================== */
+.header {
+  background-color: #fff;
+}
+
+.header__logo {
+  float: left;
+  padding: 26px 0 25px;
+}
+
+.logo__link, .logo__image {
+  display: block;
+}
+
+/* ========================================================================== *\
+   Page Header
+\* ========================================================================== */
+.page-header {
+  background-color: #449BF7;
+}
+
+.page__title {
+  color: #fff;
+  font-size: 35px;
+  line-height: 40px;
+  text-transform: uppercase;
+  padding-bottom: 0;
+  padding: 30px 0;
+}
+
 /* ========================================================================== *\
    Menu
 \* ========================================================================== */
+.menu--main {
+  float: right;
+}
+
+.menu__list--main {
+  font-family: Arial, sans-serif;
+  font-size: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu__item--main {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0 30px;
+}
+
+.menu__link--main {
+  text-decoration: none;
+  display: block;
+  padding: 41px 0;
+}
+
+.menu__link--active {
+  border-top: solid 3px #449BF7;
+  padding-top: 38px;
+}
+
 /* ========================================================================== *\
    Homepage
 \* ========================================================================== */

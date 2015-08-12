@@ -10,6 +10,8 @@
 
   $( document ).ready( function() {
     handle_menu_toggle_click();
+
+    handle_sidebar_toggle_click();
   });
 
   // ==========================================================================

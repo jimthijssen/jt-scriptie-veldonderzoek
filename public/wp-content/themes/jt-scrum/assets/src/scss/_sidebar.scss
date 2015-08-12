@@ -1,3 +1,131 @@
 /* ========================================================================== *\
    Sidebar
 \* ========================================================================== */
+
+.page__sidebar {
+  margin: 20px 0;
+}
+
+.sidebar__main {
+  background-color: $color-white-dark;
+  text-align: center;
+  padding: 45px 30px;
+}
+
+.sidebar__image {
+  width: 125px;
+  height: 125px;
+  display: block;
+  margin: 0 auto 30px;
+
+  img {
+    border-radius: 100%;
+  }
+}
+
+.sidebar__text {
+  padding-bottom: 10px;
+}
+
+.sidebar__share {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+  background-color: #fff;
+}
+
+.share__inner {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.sidebar__title, .share__subtitle {
+  display: block;
+}
+
+.share__list {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0 -8px;
+}
+
+.share__item {
+  display: inline-block;
+  padding: 0 8px 10px;
+}
+
+.share__link {
+  background-color: $color-blue-dark;
+  color: #fff;
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    background-color: $color-blue-light;
+    color: $color-blue-dark;
+  }
+
+  &:active {
+    background-color: $color-blue;
+  }
+}
+
+.sidebar__toggler__link {
+  display: block;
+  background-color: $color-white;
+  border-bottom: solid 2px $color-white-dark;
+  text-indent: -9999px;
+  position: relative;
+
+  &:after, &:before {
+    content: '';
+    background-color: $color-white-dark;
+    width: 20px;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -1px;
+  }
+
+  &:after {
+    margin-left: 0;
+    transform: rotate(-20deg);
+  }
+
+  &:before {
+    margin-left: -18px;
+    transform: rotate(20deg);
+  }
+
+  &:hover {
+    &:after, &:before {
+      animation: bounce 0.75s infinite;
+    }
+  }
+
+  .sidebar--toggled & {
+    &:after, &:before {
+      margin-top: -2px;
+    }
+
+    &:after {
+      transform: rotate(20deg);
+    }
+
+    &:before {
+      transform: rotate(-20deg);
+    }
+  }
+}
+
+@keyframes bounce {
+  0%   { margin-top: -1px; }
+  50% { margin-top: -3px; }
+  100% { margin-top: -1px; }
+}

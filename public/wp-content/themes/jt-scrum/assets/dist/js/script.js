@@ -31,6 +31,19 @@ function handle_menu_toggle_click() {
     }
   });
 }
+function handle_sidebar_toggle_click() {
+  $('#js--sidebar__toggler').click( function(e) {
+    e.preventDefault();
+
+    $('body').toggleClass('sidebar--toggled');
+
+    if( $('body').hasClass('sidebar--toggled') ) {
+      $('.sidebar__share').height( $('.sidebar__share .share__inner').outerHeight() );
+    } else {
+      $('.sidebar__share').removeAttr('style');
+    }
+  });
+}
 // ==========================================================================
 // Init Scripts
 // ==========================================================================
@@ -43,6 +56,8 @@ function handle_menu_toggle_click() {
 
   $( document ).ready( function() {
     handle_menu_toggle_click();
+
+    handle_sidebar_toggle_click();
   });
 
   // ==========================================================================

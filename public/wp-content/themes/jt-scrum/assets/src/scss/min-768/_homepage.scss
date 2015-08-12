@@ -1,0 +1,10 @@
+.page-content {
+  @include clearfix;
+  border-right: 330px solid transparent;
+  min-height: 100%;
+}
+
+.page__main {
+  float: left;
+  width: 100%;
+}

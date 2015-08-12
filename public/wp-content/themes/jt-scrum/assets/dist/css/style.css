@@ -253,6 +253,7 @@ p {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: "Lato", sans-serif;
   line-height: 1.2;
+  font-weight: bold;
   color: #232323;
   padding-bottom: 15px;
   margin: 0;
@@ -298,11 +299,12 @@ a:active {
 
 .btn, input[type="submit"] {
   background-color: transparent;
+  text-decoration: none;
   border: none;
   font-family: "Lato", sans-serif;
   line-height: 24px;
   display: inline-block;
-  padding: 13px 33px;
+  padding: 10px 33px;
   -webkit-transition: color 0.25s ease;
   transition: color 0.25s ease;
   -webkit-transition-property: color, background-color, border-color;
@@ -598,12 +600,160 @@ body {
 /* ========================================================================== *\
    Homepage
 \* ========================================================================== */
+.page__main {
+  background-color: #fff;
+  margin: 20px 0;
+  height: 400px;
+}
+
 /* ========================================================================== *\
    Sidebar
 \* ========================================================================== */
+.page__sidebar {
+  margin: 20px 0;
+}
+
+.sidebar__main {
+  background-color: #A7B7C2;
+  text-align: center;
+  padding: 45px 30px;
+}
+
+.sidebar__image {
+  width: 125px;
+  height: 125px;
+  display: block;
+  margin: 0 auto 30px;
+}
+.sidebar__image img {
+  border-radius: 100%;
+}
+
+.sidebar__text {
+  padding-bottom: 10px;
+}
+
+.sidebar__share {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+  background-color: #fff;
+}
+
+.share__inner {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.sidebar__title, .share__subtitle {
+  display: block;
+}
+
+.share__list {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0 -8px;
+}
+
+.share__item {
+  display: inline-block;
+  padding: 0 8px 10px;
+}
+
+.share__link {
+  background-color: #2079D6;
+  color: #fff;
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+.share__link:hover, .share__link:focus {
+  background-color: #73B5FB;
+  color: #2079D6;
+}
+.share__link:active {
+  background-color: #449BF7;
+}
+
+.sidebar__toggler__link {
+  display: block;
+  background-color: #DBE3E8;
+  border-bottom: solid 2px #A7B7C2;
+  text-indent: -9999px;
+  position: relative;
+}
+.sidebar__toggler__link:after, .sidebar__toggler__link:before {
+  content: '';
+  background-color: #A7B7C2;
+  width: 20px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -1px;
+}
+.sidebar__toggler__link:after {
+  margin-left: 0;
+  -webkit-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+.sidebar__toggler__link:before {
+  margin-left: -18px;
+  -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+.sidebar__toggler__link:hover:after, .sidebar__toggler__link:hover:before {
+  -webkit-animation: bounce 0.75s infinite;
+  animation: bounce 0.75s infinite;
+}
+.sidebar--toggled .sidebar__toggler__link:after, .sidebar--toggled .sidebar__toggler__link:before {
+  margin-top: -2px;
+}
+.sidebar--toggled .sidebar__toggler__link:after {
+  -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+.sidebar--toggled .sidebar__toggler__link:before {
+  -webkit-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    margin-top: -1px;
+  }
+  50% {
+    margin-top: -3px;
+  }
+  100% {
+    margin-top: -1px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    margin-top: -1px;
+  }
+  50% {
+    margin-top: -3px;
+  }
+  100% {
+    margin-top: -1px;
+  }
+}
 /* ========================================================================== *\
    Footer
 \* ========================================================================== */
+.footer {
+  background-color: #449BF7;
+  height: 200px;
+}
+
 /* ========================================================================== *\
    Min 480px
 \* ========================================================================== */
@@ -625,6 +775,30 @@ body {
 
   .menu--toggled .content:after {
     content: none;
+  }
+
+  .page-content {
+    *zoom: 1;
+    border-right: 330px solid transparent;
+    min-height: 100%;
+  }
+  .page-content:before, .page-content:after {
+    content: " ";
+    display: table;
+  }
+  .page-content:after {
+    clear: both;
+  }
+
+  .page__main {
+    float: left;
+    width: 100%;
+  }
+
+  .page__sidebar {
+    float: right;
+    width: 310px;
+    margin-right: -330px;
   }
 
   .page-header:after {

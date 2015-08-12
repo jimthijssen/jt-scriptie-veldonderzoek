@@ -29,6 +29,9 @@
 @media only screen and (min-width: 768px) {
   @import "min-768/_base.scss";
 
+  @import "min-768/_homepage.scss";
+  @import "min-768/_sidebar.scss";
+
   @import "min-768/_header.scss";
   @import "min-768/_menu.scss";
 }

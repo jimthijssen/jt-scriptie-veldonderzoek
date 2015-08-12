@@ -10,6 +10,14 @@
       </a>
     </h1>
 
+    <div class="menu__toggler">
+      <a id="js--menu__toggler" class="toggler__link" href="#">
+        <span class="toggler__stripe toggler__stripe--1"></span>
+        <span class="toggler__stripe toggler__stripe--2"></span>
+        <span class="toggler__stripe toggler__stripe--3"></span>
+      </a>
+    </div>
+
     <nav class="menu menu--main">
       <ul class="menu__list menu__list--main">
         <li class="menu__item menu__item--main">

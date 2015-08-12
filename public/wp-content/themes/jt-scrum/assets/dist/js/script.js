@@ -18,6 +18,19 @@ get_viewport_size = function() {
   }
   return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
 };
+function handle_menu_toggle_click() {
+  $('#js--menu__toggler').click( function(e) {
+    e.preventDefault();
+
+    $('body').toggleClass('menu--toggled');
+
+    if( $('body').hasClass('menu--toggled') ) {
+      $('#js--menu--page').height( $('#js--menu--page .menu__list').height() );
+    } else {
+      $('#js--menu--page').removeAttr('style');
+    }
+  });
+}
 // ==========================================================================
 // Init Scripts
 // ==========================================================================
@@ -29,7 +42,7 @@ get_viewport_size = function() {
   // ==========================================================================
 
   $( document ).ready( function() {
-
+    handle_menu_toggle_click();
   });
 
   // ==========================================================================

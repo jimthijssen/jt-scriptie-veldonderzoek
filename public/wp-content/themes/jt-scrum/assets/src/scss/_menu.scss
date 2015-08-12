@@ -3,32 +3,55 @@
 \* ========================================================================== */
 
 .menu--main {
+  display: none;
+}
+
+// Menu toggler
+.menu__toggler {
   float: right;
+  margin: 25px 0;
 }
 
-.menu__list--main {
-  font-family: $font-menu;
-  font-size: 0;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu__item--main {
-  font-size: $fontsize-base;
-  line-height: 18px;
-  text-transform: uppercase;
-  display: inline-block;
-  padding: 0 30px;
-}
-
-.menu__link--main {
-  text-decoration: none;
+.toggler__link {
   display: block;
-  padding: 41px 0;
+  height: 50px;
+  width: 50px;
+  position: relative;
 }
 
-.menu__link--active {
-  border-top: solid 3px $color-blue;
-  padding-top: 38px;
+.toggler__stripe {
+  background-color: $color-blue;
+  width: 18px;
+  height: 2px;
+  margin-left: -9px;
+  transition: all 0.25s ease;
+  position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.toggler__stripe--1 {
+  margin-top: -7px;
+
+  .menu--toggled & {
+    margin-top: -1px;
+    transform: rotate(-45deg);
+  }
+}
+
+.toggler__stripe--2 {
+  margin-top: -1px;
+
+  .menu--toggled & {
+    opacity: 0;
+  }
+}
+
+.toggler__stripe--3 {
+  margin-top: 5px;
+
+  .menu--toggled & {
+    margin-top: -1px;
+    transform: rotate(45deg);
+  }
 }

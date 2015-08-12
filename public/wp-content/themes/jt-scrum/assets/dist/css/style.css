@@ -623,6 +623,14 @@ body {
     padding: 0 40px;
   }
 
+  .menu--toggled .content:after {
+    content: none;
+  }
+
+  .page-header:after {
+    content: none;
+  }
+
   .menu--main {
     display: block;
     float: right;

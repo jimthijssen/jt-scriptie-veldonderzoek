@@ -24,7 +24,7 @@
 }
 
 .sidebar__text {
-  padding-bottom: 10px;
+  padding-bottom: 13px;
 }
 
 .sidebar__share {
@@ -41,6 +41,10 @@
 
 .sidebar__title, .share__subtitle {
   display: block;
+}
+
+.sidebar__title {
+  padding-bottom: 20px;
 }
 
 .share__list {

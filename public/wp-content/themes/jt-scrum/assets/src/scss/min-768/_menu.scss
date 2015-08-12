@@ -17,16 +17,30 @@
   text-transform: uppercase;
   display: inline-block;
   padding: 0 30px;
+
+  &:last-child {
+    padding-right: 0;
+  }
 }
 
 .menu__link--main {
+  border-top: solid 0 transparent;
   text-decoration: none;
   display: block;
   padding: 41px 0;
+  letter-spacing: 2px;
+  transition: all 0.35s ease;
+
+  &:hover, &:focus {
+    border-top-width: 10px;
+    border-top-color: $color-blue;
+    padding-top: 31px;
+  }
 }
 
 .menu__link--active {
-  border-top: solid 3px $color-blue;
+  border-top-width: 3px;
+  border-top-color: $color-blue;
   padding-top: 38px;
 }
 

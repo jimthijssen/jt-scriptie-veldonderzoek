@@ -1,4 +1,4 @@
-<div class="page-content container">
+<div class="page-content container cf">
   <div class="page__main">
 
   </div>

@@ -573,7 +573,7 @@ body {
 }
 
 .toggler__stripe--1 {
-  margin-top: -7px;
+  margin-top: -9px;
 }
 .menu--toggled .toggler__stripe--1 {
   margin-top: -1px;
@@ -589,7 +589,7 @@ body {
 }
 
 .toggler__stripe--3 {
-  margin-top: 5px;
+  margin-top: 7px;
 }
 .menu--toggled .toggler__stripe--3 {
   margin-top: -1px;
@@ -602,7 +602,7 @@ body {
 \* ========================================================================== */
 .page__main {
   background-color: #fff;
-  margin: 20px 0;
+  margin: 10px 0 20px;
   height: 400px;
 }
 
@@ -610,7 +610,7 @@ body {
    Sidebar
 \* ========================================================================== */
 .page__sidebar {
-  margin: 20px 0;
+  margin: 10px 0 20px;
 }
 
 .sidebar__main {
@@ -778,16 +778,8 @@ body {
   }
 
   .page-content {
-    *zoom: 1;
     border-right: 330px solid transparent;
     min-height: 100%;
-  }
-  .page-content:before, .page-content:after {
-    content: " ";
-    display: table;
-  }
-  .page-content:after {
-    clear: both;
   }
 
   .page__main {
@@ -825,15 +817,28 @@ body {
     display: inline-block;
     padding: 0 30px;
   }
+  .menu__item--main:last-child {
+    padding-right: 0;
+  }
 
   .menu__link--main {
+    border-top: solid 0 transparent;
     text-decoration: none;
     display: block;
     padding: 41px 0;
+    letter-spacing: 2px;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+  }
+  .menu__link--main:hover, .menu__link--main:focus {
+    border-top-width: 10px;
+    border-top-color: #449BF7;
+    padding-top: 31px;
   }
 
   .menu__link--active {
-    border-top: solid 3px #449BF7;
+    border-top-width: 3px;
+    border-top-color: #449BF7;
     padding-top: 38px;
   }
 

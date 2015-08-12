@@ -1,0 +1,53 @@
+.content__form {
+  form {
+    padding-right: 178px;
+  }
+}
+
+.form__warning {
+  right: 178px;
+}
+
+.form__submit {
+  position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.form__input {
+  margin-bottom: 0;
+}
+
+.block__inner {
+  margin: 0 -1 * (23px / 2);
+}
+
+.content__block {
+  width: 50%;
+  float: left;
+  padding: 0 (23px / 2);
+
+  &:nth-child(odd) {
+    clear: both;
+  }
+}
+
+.content__block--featured {
+  float: none;
+  width: auto;
+  padding: 23px;
+}
+
+.block__image--featured, .block__text--featured {
+  float: left;
+  width: 50%;
+}
+
+.block__image--featured {
+  padding-right: (23px / 2);
+}
+
+.block__text--featured {
+  padding-left: (23px / 2);
+  margin-top: -5px;
+}

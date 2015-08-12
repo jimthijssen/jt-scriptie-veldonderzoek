@@ -2,8 +2,97 @@
    Homepage
 \* ========================================================================== */
 
+.page-content {
+  padding: 0 10px;
+}
+
 .page__main {
   background-color: #fff;
-  margin: 10px 0 20px;
-  height: 400px;
+  margin: 0 0 20px;
+}
+
+.content__image {
+  overflow: hidden;
+
+  img {
+    transition: all 0.5s ease;
+    transform: scale(1);
+
+    &:hover, &:focus {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.content__text, .content__form, .content__blocks {
+  padding: 23px;
+}
+
+.content__blocks {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.content__block {
+  margin-bottom: 8px;
+}
+
+.content__block--featured {
+  background-color: $color-blue;
+  color: #fff;
+  padding: 23px;
+  margin: 23px -23px 0;
+
+  p {
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.block__image {
+  padding-bottom: $spacing-base;
+
+
+  img {
+    transition: all 0.5s ease;
+    transform: scale(1);
+
+    &:hover, &:focus {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.image__inner {
+  overflow: hidden;
+}
+
+.content__form {
+  form {
+    position: relative;
+  }
+}
+
+.form__input {
+  position: relative;
+  z-index: 10;
+}
+
+.form__warning {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.35s ease;
+
+  .form--toggled & {
+    top: -60px;
+    opacity: 1;
+  }
+}
+
+.form__input {
+  margin-bottom: 23px;
 }

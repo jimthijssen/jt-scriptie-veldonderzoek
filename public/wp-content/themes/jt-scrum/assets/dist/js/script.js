@@ -44,6 +44,18 @@ function handle_sidebar_toggle_click() {
     }
   });
 }
+function handle_form_button_click() {
+  $('.form__submit').click( function(e) {
+    e.preventDefault();
+
+    $('body').addClass('form--toggled');
+    $('.form__input').addClass('success');
+
+    setTimeout( function() {
+      $('body').removeClass('form--toggled');
+    }, 2000 );
+  });
+}
 // ==========================================================================
 // Init Scripts
 // ==========================================================================
@@ -58,6 +70,8 @@ function handle_sidebar_toggle_click() {
     handle_menu_toggle_click();
 
     handle_sidebar_toggle_click();
+
+    handle_form_button_click();
   });
 
   // ==========================================================================

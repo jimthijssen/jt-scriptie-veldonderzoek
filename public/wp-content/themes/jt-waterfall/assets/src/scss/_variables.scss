@@ -2,42 +2,64 @@
 // Variables
 // ==========================================================================
 
-//
-// Background Color
-// --------------------------------------------------------------------------
-
-$bgcolor-body: #eee;
+@font-face {
+  font-family: 'Nexa';
+  src: url('../../fonts/nexa-bold/nexa_bold-webfont.eot');
+  src: url('../../fonts/nexa-bold/nexa_bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/nexa-bold/nexa_bold-webfont.woff2') format('woff2'),
+       url('../../fonts/nexa-bold/nexa_bold-webfont.woff') format('woff'),
+       url('../../fonts/nexa-bold/nexa_bold-webfont.ttf') format('truetype'),
+       url('../../fonts/nexa-bold/nexa_bold-webfont.svg#nexa_boldregular') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
 
 //
 // Color
 // --------------------------------------------------------------------------
 
-$color-base: #333;
+$color-base: #323232;
+$color-primary: #fff;
+$color-secondary: #EEEEEF;
+
+$color-red: #DA2E3C;
+$color-red-light: #F5223B;
+$color-red-dark: #D71324;
+
+$color-grey: #515151;
+$color-grey-light: #767676;
+$color-grey-dark: #323232;
+
+$color-green: #A6CA00;
+
+$color-white: #DBE3E8;
 
 //
 // Font Family
 // --------------------------------------------------------------------------
 
 $font-base: Arial, sans-serif;
-$font-titles: 'Helvetica', Arial, sans-serif;
+$font-titles: 'Nexa', Arial, sans-serif;
+$font-buttons: 'Lato', Arial, sans-serif;
 
 //
 // Font Size
 // --------------------------------------------------------------------------
 
-$fontsize-base: 13px;
-$fontsize-h1: 24px;
-$fontsize-h2: 22px;
-$fontsize-h3: 20px;
-$fontsize-h4: 18px;
-$fontsize-h5: 16px;
-$fontsize-h6: 14px;
+$fontsize-base: 16px;
+$fontsize-h1: 36px;
+$fontsize-h2: 32px;
+$fontsize-h3: 28px;
+$fontsize-h4: 24px;
+$fontsize-h5: 20px;
+$fontsize-h6: 16px;
 
 //
 // Line Height
 // --------------------------------------------------------------------------
 
-$lineheight-base: 1.50;
+$lineheight-base: 25px;
+$lineheight-titles: 35px;
 
 //
 // Padding

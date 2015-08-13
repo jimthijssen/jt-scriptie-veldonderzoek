@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Nexa';
+  src: url("../../fonts/nexa-bold/nexa_bold-webfont.eot");
+  src: url("../../fonts/nexa-bold/nexa_bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/nexa-bold/nexa_bold-webfont.woff2") format("woff2"), url("../../fonts/nexa-bold/nexa_bold-webfont.woff") format("woff"), url("../../fonts/nexa-bold/nexa_bold-webfont.ttf") format("truetype"), url("../../fonts/nexa-bold/nexa_bold-webfont.svg#nexa_boldregular") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
 /* ========================================================================== *\
  Normalize.css v2.1.2 | MIT License | git.io/normalize
 \* ========================================================================== */
@@ -218,45 +225,209 @@ html {
 }
 
 body {
-  background-color: #eee;
-  color: #333;
+  background-color: #fff;
+  color: #323232;
   font-family: Arial, sans-serif;
-  font-size: 13px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 25px;
   min-width: 320px;
+}
+
+.container {
+  padding: 0 10px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 p {
   padding-bottom: 15px;
+  margin: 0;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  font-family: "Helvetica", Arial, sans-serif;
+  color: #DA2E3C;
+  font-family: "Nexa", Arial, sans-serif;
+  line-height: 35px;
+  font-weight: bold;
+  margin: 0;
   padding-bottom: 15px;
 }
 
 h1, .h1 {
-  font-size: 24px;
+  font-size: 36px;
 }
 
 h2, .h2 {
-  font-size: 22px;
+  font-size: 32px;
 }
 
 h3, .h3 {
-  font-size: 20px;
+  font-size: 28px;
 }
 
 h4, .h4 {
-  font-size: 18px;
+  font-size: 24px;
 }
 
 h5, .h5 {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 h6, .h6 {
-  font-size: 14px;
+  font-size: 16px;
+}
+
+a {
+  color: #DA2E3C;
+  -webkit-transition: color 0.25s ease;
+  transition: color 0.25s ease;
+  -webkit-transition-property: color, background-color, border-color;
+  transition-property: color, background-color, border-color;
+}
+a:hover, a:focus {
+  color: #F5223B;
+}
+a:active {
+  color: #D71324;
+}
+
+.btn {
+  font-family: "Lato", Arial, sans-serif;
+  border: solid 2px;
+  line-height: 24px;
+  padding: 11px 34px;
+  display: inline-block;
+}
+
+.btn--default {
+  background-color: transparent;
+  border-color: #515151;
+  color: #515151;
+}
+.btn--default:hover, .btn--default:focus {
+  border-color: #767676;
+  color: #767676;
+}
+.btn--default:active {
+  background-color: #323232;
+  border-color: #323232;
+  color: #fff;
+}
+
+.btn--grey {
+  background-color: #515151;
+  border-color: #515151;
+  color: #fff;
+}
+.btn--grey:hover, .btn--grey:focus {
+  background-color: #767676;
+  border-color: #767676;
+}
+.btn--grey:active {
+  background-color: #323232;
+  border-color: #323232;
+}
+
+.btn--red {
+  background-color: #DA2E3C;
+  border-color: #DA2E3C;
+  color: #fff;
+}
+.btn--red:hover, .btn--red:focus {
+  background-color: #F5223B;
+  border-color: #F5223B;
+}
+.btn--red:active {
+  background-color: #D71324;
+  border-color: #D71324;
+}
+
+.btn--more {
+  position: relative;
+}
+.btn--more:after {
+  content: '>';
+  display: inline-block;
+  margin-left: 10px;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.btn--more:hover:after, .btn--more:focus:after {
+  -webkit-transform: translateX(5px);
+  transform: translateX(5px);
+}
+
+input[type='tel'], input[type='password'], input[type='email'], input[type='text'], select, textarea {
+  background-color: transparent;
+  color: #929292;
+  border: solid 2px #DBE3E8;
+  font-size: 20px;
+  font-family: "Lato", Arial, sans-serif;
+  font-weight: 300;
+  line-height: 24px;
+  padding: 11px 16px;
+  display: inline-block;
+}
+input[type='tel']:focus, input[type='password']:focus, input[type='email']:focus, input[type='text']:focus, select:focus, textarea:focus {
+  border-color: #515151;
+}
+input[type='tel'].success, .success input[type='tel'], input[type='password'].success, .success input[type='password'], input[type='email'].success, .success input[type='email'], input[type='text'].success, .success input[type='text'], select.success, .success select, textarea.success, .success textarea {
+  border-color: #A6CA00;
+}
+input[type='tel'].error, .error input[type='tel'], input[type='password'].error, .error input[type='password'], input[type='email'].error, .error input[type='email'], input[type='text'].error, .error input[type='text'], select.error, .error select, textarea.error, .error textarea {
+  border-color: #DA2E3C;
+}
+
+input:focus, input:active, select:focus, select:active, textarea:focus, textarea:active {
+  outline: none;
+  box-shadow: none;
+}
+
+input[type="submmit"] {
+  white-space: normal;
+}
+
+textarea {
+  max-width: 100%;
+}
+
+.warning {
+  font-family: "Lato", Arial, sans-serif;
+  font-weight: 300;
+  color: #fff;
+  line-height: 20px;
+  border-radius: 2px;
+  position: relative;
+  padding: 55px 15px 0;
+}
+.warning:after {
+  content: 'i';
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  width: 23px;
+  height: 23px;
+}
+
+.warning--success {
+  background-color: #A6CA00;
+}
+
+.warning--error {
+  background-color: #DA2E3C;
+}
+
+ul, ol {
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 body {
@@ -353,6 +524,9 @@ body {
   /* ========================================================================== *\
      Base
   \* ========================================================================== */
+  .container {
+    padding: 0 25px;
+  }
 }
 /* ========================================================================== *\
    Min 960px

@@ -73,12 +73,14 @@ function jf_get_sidebar_template_part( $templates ){
 // Enqueue all Stylesheets and Javascript files
 if ( ! function_exists( 'jf_enqueue_scripts_styles' ) ) {
   function jf_enqueue_scripts_styles() {
-    // Enqueue styles
+    wp_register_style( 'font-lato', 'http://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic', false );
     if ( WP_ENV == 'production' ) {
       wp_register_style( 'style', get_template_directory_uri() .'/assets/dist/css/style.min.css', false );
     } else {
       wp_register_style( 'style', get_template_directory_uri() .'/assets/dist/css/style.css', false );
     }
+
+    wp_enqueue_style( 'font-lato' );
     wp_enqueue_style( 'style' );
 
     // Enqueue scripts

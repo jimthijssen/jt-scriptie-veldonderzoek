@@ -21,6 +21,7 @@
 
               <div class="footer__form">
                 <form class="form--footer cf">
+                  <p class="warning warning--success form__warning">An example alert style</p>
                   <input type="text" class="input--footer" placeholder="Text field">
                   <input type="text" class="input--footer" placeholder="Text field">
                   <textarea class="input--footer">Text area</textarea>

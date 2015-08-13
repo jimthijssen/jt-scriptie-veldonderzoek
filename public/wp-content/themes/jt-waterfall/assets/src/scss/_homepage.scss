@@ -16,12 +16,12 @@
     content: '';
     background-color: $color-red;
     position: absolute;
-    margin-top: -1px;
+    margin-top: -1.5px;
     width: auto;
       top: 50%;
       left: -15px;
       right: -15px;
-    height: 2px;
+    height: 3px;
   }
 }
 
@@ -52,10 +52,22 @@
   display: table-header-group;
 }
 
+.zoom__block {
+
+}
+
 .image__inner {
   position: relative;
   overflow: hidden;
   margin-bottom: 10px;
+
+  img {
+    transition: all 0.35s ease;
+
+    &:hover, &:focus {
+      transform: scale(1.05);
+    }
+  }
 
   &:before, &:after {
     content: '';
@@ -64,6 +76,7 @@
     display: block;
     position: absolute;
       bottom: 0;
+    z-index: 1;
   }
 
   &:before {
@@ -174,4 +187,48 @@
 
 .featured__title {
   color: #fff;
+}
+
+.page__blocks {
+  .container {
+    opacity: 0;
+    transform: translate(0, 50px);
+
+    &.in-view {
+      animation: animation_fade 400ms linear 200ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 200ms;
+      animation-fill-mode: forwards;
+
+      @for $i from 1 through 12 {
+        &.fact-#{$i} {
+          animation: animation_fade 400ms linear $i * 200ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) $i * 200ms;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes animation_fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-webkit-keyframes animation_fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes animation_slide {
+  to {
+    transform: translate(0, 0px);
+    -webkit-transform: translate(0, 0px);
+  }
+}
+
+@-webkit-keyframes animation_slide {
+  to {
+    transform: translate(0, 0px);
+    -webkit-transform: translate(0, 0px);
+  }
 }

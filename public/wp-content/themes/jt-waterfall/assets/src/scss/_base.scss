@@ -224,6 +224,7 @@ input[type="submmit"] {
 }
 
 textarea {
+  width: 100%;
   max-width: 100%;
 }
 
@@ -232,26 +233,32 @@ textarea {
 // --------------------------------------------------------------------------
 
 .warning {
-  font-family: $font-buttons;
-  font-weight: 300;
-  color: #fff;
-  line-height: 20px;
-  border-radius: 2px;
   position: relative;
-  padding: 55px 15px 0;
+  border-radius: 2px;
+  font-weight: 300;
+  line-height: 20px;
+  padding: 15px 52px;
 
   &:after {
     content: 'i';
+    background-color: #fff;
+    border-radius: 100%;
+    color: $color-green;
+    display: block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: -12px;
     position: absolute;
       top: 50%;
       left: 16px;
-    width: 23px;
-    height: 23px;
   }
 }
 
 .warning--success {
   background-color: $color-green;
+  color: #fff;
 }
 
 .warning--error {

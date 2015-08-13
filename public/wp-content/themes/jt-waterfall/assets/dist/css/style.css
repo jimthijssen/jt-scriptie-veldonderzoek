@@ -401,29 +401,36 @@ input[type="submmit"] {
 }
 
 textarea {
+  width: 100%;
   max-width: 100%;
 }
 
 .warning {
-  font-family: "Lato", Arial, sans-serif;
-  font-weight: 300;
-  color: #fff;
-  line-height: 20px;
-  border-radius: 2px;
   position: relative;
-  padding: 55px 15px 0;
+  border-radius: 2px;
+  font-weight: 300;
+  line-height: 20px;
+  padding: 15px 52px;
 }
 .warning:after {
   content: 'i';
+  background-color: #fff;
+  border-radius: 100%;
+  color: #A6CA00;
+  display: block;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  margin-top: -12px;
   position: absolute;
   top: 50%;
   left: 16px;
-  width: 23px;
-  height: 23px;
 }
 
 .warning--success {
   background-color: #A6CA00;
+  color: #fff;
 }
 
 .warning--error {
@@ -512,14 +519,14 @@ body {
 \* ========================================================================== */
 .header {
   border-top: solid 4px #DA2E3C;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.64)), color-stop(100%, transparent));
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.64) 0%, transparent 100%);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.64) 0%, transparent 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.8)), color-stop(100%, transparent));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  min-height: 60px;
+  min-height: 85px;
   z-index: 5;
 }
 
@@ -689,12 +696,12 @@ body {
   content: '';
   background-color: #DA2E3C;
   position: absolute;
-  margin-top: -1px;
+  margin-top: -1.5px;
   width: auto;
   top: 50%;
   left: -15px;
   right: -15px;
-  height: 2px;
+  height: 3px;
 }
 
 .page__content {
@@ -727,6 +734,14 @@ body {
   overflow: hidden;
   margin-bottom: 10px;
 }
+.image__inner img {
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.image__inner img:hover, .image__inner img:focus {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
 .image__inner:before, .image__inner:after {
   content: '';
   background-color: #fff;
@@ -734,6 +749,7 @@ body {
   display: block;
   position: absolute;
   bottom: 0;
+  z-index: 1;
 }
 .image__inner:before {
   width: auto;
@@ -833,6 +849,118 @@ body {
   color: #fff;
 }
 
+.page__blocks .container {
+  opacity: 0;
+  -webkit-transform: translate(0, 50px);
+  transform: translate(0, 50px);
+}
+.page__blocks .container.in-view {
+  -webkit-animation: animation_fade 400ms linear 200ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 200ms;
+  animation: animation_fade 400ms linear 200ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 200ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.page__blocks .container.in-view.fact-1 {
+  -webkit-animation: animation_fade 400ms linear 200ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 200ms;
+  animation: animation_fade 400ms linear 200ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 200ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.page__blocks .container.in-view.fact-2 {
+  -webkit-animation: animation_fade 400ms linear 400ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 400ms;
+  animation: animation_fade 400ms linear 400ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 400ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.page__blocks .container.in-view.fact-3 {
+  -webkit-animation: animation_fade 400ms linear 600ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 600ms;
+  animation: animation_fade 400ms linear 600ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 600ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.page__blocks .container.in-view.fact-4 {
+  -webkit-animation: animation_fade 400ms linear 800ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 800ms;
+  animation: animation_fade 400ms linear 800ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 800ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.page__blocks .container.in-view.fact-5 {
+  -webkit-animation: animation_fade 400ms linear 1000ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 1000ms;
+  animation: animation_fade 400ms linear 1000ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 1000ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.page__blocks .container.in-view.fact-6 {
+  -webkit-animation: animation_fade 400ms linear 1200ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 1200ms;
+  animation: animation_fade 400ms linear 1200ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 1200ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.page__blocks .container.in-view.fact-7 {
+  -webkit-animation: animation_fade 400ms linear 1400ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 1400ms;
+  animation: animation_fade 400ms linear 1400ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 1400ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.page__blocks .container.in-view.fact-8 {
+  -webkit-animation: animation_fade 400ms linear 1600ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 1600ms;
+  animation: animation_fade 400ms linear 1600ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 1600ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.page__blocks .container.in-view.fact-9 {
+  -webkit-animation: animation_fade 400ms linear 1800ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 1800ms;
+  animation: animation_fade 400ms linear 1800ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 1800ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.page__blocks .container.in-view.fact-10 {
+  -webkit-animation: animation_fade 400ms linear 2000ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 2000ms;
+  animation: animation_fade 400ms linear 2000ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 2000ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.page__blocks .container.in-view.fact-11 {
+  -webkit-animation: animation_fade 400ms linear 2200ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 2200ms;
+  animation: animation_fade 400ms linear 2200ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 2200ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.page__blocks .container.in-view.fact-12 {
+  -webkit-animation: animation_fade 400ms linear 2400ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 2400ms;
+  animation: animation_fade 400ms linear 2400ms, animation_slide 800ms cubic-bezier(0.23, 1, 0.32, 1) 2400ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animation_fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes animation_fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes animation_slide {
+  to {
+    transform: translate(0, 0px);
+    -webkit-transform: translate(0, 0px);
+  }
+}
+@-webkit-keyframes animation_slide {
+  to {
+    transform: translate(0, 0px);
+    -webkit-transform: translate(0, 0px);
+  }
+}
 /* ========================================================================== *\
    Sidebar
 \* ========================================================================== */
@@ -917,6 +1045,24 @@ body {
   margin-top: -50px;
 }
 
+.footer__form {
+  position: relative;
+}
+
+.form__warning {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.form--toggled .form__warning {
+  top: -60px;
+  opacity: 1;
+}
+
 /* ========================================================================== *\
    Min 480px
 \* ========================================================================== */
@@ -942,6 +1088,10 @@ body {
 
   .banner_search {
     padding-top: 330px;
+  }
+
+  .menu--main-mobile .container {
+    padding: 0 10px;
   }
 
   /* ========================================================================== *\
@@ -1024,6 +1174,12 @@ body {
     margin-top: -65px;
     overflow: hidden;
   }
+
+  .form__warning {
+    left: 20px;
+    right: 0;
+    width: auto;
+  }
 }
 /* ========================================================================== *\
    Min 960px
@@ -1066,30 +1222,13 @@ body {
     line-height: 24px;
     letter-spacing: 2.3px;
     text-transform: uppercase;
-    padding-left: 20px;
     position: relative;
   }
   .menu__link--main:hover, .menu__link--main:focus {
     color: #F5223B;
   }
-  .menu__link--main:hover:before, .menu__link--main:focus:before {
-    background-image: url("../img/icon-home-hover.png");
-  }
   .menu__link--main.menu--active {
     color: #DA2E3C;
-  }
-  .menu__link--main.menu--active:before {
-    background-image: url("../img/icon-home.png");
-  }
-  .menu__link--main:before {
-    content: '';
-    display: block;
-    background: url("../img/icon-home-default.png") no-repeat 50% 50%;
-    width: 14px;
-    height: 14px;
-    position: absolute;
-    top: 5px;
-    left: 0;
   }
 
   /* ========================================================================== *\
@@ -1120,6 +1259,7 @@ body {
 
   .page__block--featured {
     float: right;
+    margin-top: 20px;
   }
 }
 /* ========================================================================== *\

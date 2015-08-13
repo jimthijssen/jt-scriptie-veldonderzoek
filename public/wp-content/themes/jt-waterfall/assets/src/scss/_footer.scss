@@ -84,3 +84,21 @@
 .footer__title-wrapper {
   margin-top: -50px;
 }
+
+.footer__form {
+  position: relative;
+}
+
+.form__warning {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.35s ease;
+
+  .form--toggled & {
+    top: -60px;
+    opacity: 1;
+  }
+}

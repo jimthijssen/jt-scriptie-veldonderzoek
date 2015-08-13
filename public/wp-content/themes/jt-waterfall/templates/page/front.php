@@ -6,7 +6,7 @@
 
     <div class="page__content">
       <div class="page__text page__text--main">
-        <p>Curabitur blandit tempus porttitor. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor.</p>
+        <p>Curabitur blandit tempus porttitor. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum <a href="#">faucibus dolor auctor</a>. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor.</p>
 
         <div class="page__button">
           <a href="#" class="btn btn--red btn--more">Lees meer</a>

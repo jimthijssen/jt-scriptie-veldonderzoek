@@ -1,0 +1,55 @@
+/* ========================================================================== *\
+   Homepage
+\* ========================================================================== */
+
+.page__main {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.page__title-wrapper {
+  margin-bottom: 45px;
+
+  &:after {
+    left: 0;
+    right: 0;
+  }
+}
+
+.page__image--main, .page__text--main {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.page__text--main {
+  padding-right: 35px;
+}
+
+.page__image--main {
+  width: 350px;
+
+  .image__inner {
+    margin-bottom: 0;
+  }
+}
+
+.page__blocks {
+  .container {
+    padding: 60px 25px 45px;
+  }
+
+  .page__title-wrapper {
+    margin-bottom: 20px;
+  }
+}
+
+.page__block,
+.page__block--featured {
+  padding: 0 10px 10px;
+  width: 50%;
+  float: left;
+}
+
+.block__inner {
+  margin: 0 -10px;
+}

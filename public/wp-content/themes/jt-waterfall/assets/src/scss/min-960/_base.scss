@@ -1,0 +1,7 @@
+body {
+  &.menu--opened {
+    &:after {
+      content: none;
+    }
+  }
+}

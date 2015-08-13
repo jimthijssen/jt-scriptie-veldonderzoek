@@ -973,8 +973,12 @@ body {
    Min 960px
 \* ========================================================================== */
 @media only screen and (min-width: 960px) {
-  .menu-toggler-wrapper {
-    display: none;
+  body.menu--opened:after {
+    content: none;
+  }
+
+  .menu-toggler-wrapper, .menu--main-mobile {
+    display: none !important;
   }
 
   .menu--main-desktop {

@@ -840,16 +840,34 @@ body {
    Footer
 \* ========================================================================== */
 .footer {
-  background-color: #323232;
+  background-color: #515151;
   color: #fff;
   margin-top: 40px;
+  position: relative;
+}
+.footer .container {
+  position: relative;
+  z-index: 10;
+}
+
+.footer__outer {
+  position: relative;
+}
+.footer__outer:after {
+  content: '';
+  background-color: #323232;
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
 }
 
 .footer__top {
   position: relative;
   overflow: hidden;
   height: 60px;
-  margin-top: -60px;
 }
 .footer__top:before, .footer__top:after {
   content: '';
@@ -996,7 +1014,6 @@ body {
 
   .footer__inner {
     padding: 40px 0;
-    overflow: hidden;
   }
 
   .footer__image {
@@ -1004,7 +1021,8 @@ body {
   }
 
   .footer__title-wrapper {
-    margin-top: -40px;
+    margin-top: -65px;
+    overflow: hidden;
   }
 }
 /* ========================================================================== *\

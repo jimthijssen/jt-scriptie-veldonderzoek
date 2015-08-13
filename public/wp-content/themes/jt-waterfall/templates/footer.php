@@ -1,6 +1,7 @@
     </div> <!--- .wrap -->
 
     <footer class="footer">
+      <div class="footer__top"></div>
       <div class="container cf">
         <div class="footer__inner">
           <div class="footer__title-wrapper title--striped">

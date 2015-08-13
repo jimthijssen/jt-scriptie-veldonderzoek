@@ -5,6 +5,39 @@
 .footer {
   background-color: $color-grey-dark;
   color: #fff;
+  margin-top: 40px;
+}
+
+.footer__top {
+  position: relative;
+  overflow: hidden;
+  height: 60px;
+  margin-top: -60px;
+
+  &:before, &:after {
+    content: '';
+    background-color: $color-grey-dark;
+    height: 60px;
+    display: block;
+    position: absolute;
+      bottom: 0;
+  }
+
+  &:before {
+    width: auto;
+    right: 50px;
+    left: 0;
+  }
+
+  &:after {
+    width: 100px;
+    height: 100px;
+    right: 0;
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-45deg);
+    right: 0px;
+    bottom: -60px;
+  }
 }
 
 .footer__inner {
@@ -26,4 +59,8 @@
 
 .submit--footer {
   float: right;
+}
+
+.footer__title-wrapper {
+  margin-top: -50px;
 }

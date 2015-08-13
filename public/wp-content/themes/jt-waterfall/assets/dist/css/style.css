@@ -261,6 +261,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-weight: bold;
   margin: 0;
   padding-bottom: 15px;
+  text-transform: uppercase;
 }
 
 h1, .h1 {
@@ -678,13 +679,13 @@ body {
   padding: 30px 5px;
 }
 
-.page__title-wrapper {
+.page__title-wrapper, .footer__title-wrapper {
   padding: 0 20px;
   margin-bottom: 15px;
   position: relative;
   text-align: center;
 }
-.page__title-wrapper:after {
+.page__title-wrapper:after, .footer__title-wrapper:after {
   content: '';
   background-color: #DA2E3C;
   position: absolute;
@@ -701,7 +702,7 @@ body {
   table-layout: fixed;
 }
 
-.page__title {
+.page__title, .footer__title {
   background-color: #fff;
   position: relative;
   display: inline-block;
@@ -710,9 +711,11 @@ body {
   z-index: 2;
   padding: 0 10px;
 }
-.page__title.color--grey {
-  width: auto;
+.page__title.color--grey, .footer__title.color--grey {
   background-color: #323232;
+}
+.page__title.page__title--block, .footer__title.page__title--block {
+  width: auto;
 }
 
 .page__image {
@@ -836,6 +839,32 @@ body {
 /* ========================================================================== *\
    Footer
 \* ========================================================================== */
+.footer {
+  background-color: #323232;
+  color: #fff;
+}
+
+.footer__inner {
+  padding: 25px 5px;
+}
+
+.footer__image {
+  margin-bottom: 45px;
+}
+
+.footer__text {
+  margin-bottom: 30px;
+}
+
+.input--footer {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.submit--footer {
+  float: right;
+}
+
 /* ========================================================================== *\
    Min 480px
 \* ========================================================================== */
@@ -911,6 +940,33 @@ body {
 
   .block__inner {
     margin: 0 -10px;
+  }
+
+  /* ========================================================================== *\
+     Footer
+  \* ========================================================================== */
+  .footer__text, .footer__form {
+    float: left;
+    width: 50%;
+  }
+
+  .footer__text {
+    padding-right: 20px;
+    margin-bottom: 0;
+    margin-top: -5px;
+  }
+
+  .footer__form {
+    padding-left: 20px;
+  }
+
+  .footer__inner {
+    padding: 40px 0;
+    overflow: hidden;
+  }
+
+  .footer__image {
+    padding-top: 15px;
   }
 }
 /* ========================================================================== *\

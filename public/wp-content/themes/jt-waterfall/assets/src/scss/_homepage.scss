@@ -6,7 +6,7 @@
   padding: 30px 5px;
 }
 
-.page__title-wrapper {
+.page__title-wrapper, .footer__title-wrapper {
   padding: 0 20px;
   margin-bottom: $padding-base;
   position: relative;
@@ -30,7 +30,7 @@
   table-layout: fixed;
 }
 
-.page__title {
+.page__title, .footer__title {
   background-color: #fff;
   position: relative;
   display: inline-block;
@@ -40,8 +40,11 @@
   padding: 0 10px;
 
   &.color--grey {
-    width: auto;
     background-color: $color-grey-dark;
+  }
+
+  &.page__title--block {
+    width: auto;
   }
 }
 

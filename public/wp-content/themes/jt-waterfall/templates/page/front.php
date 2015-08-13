@@ -29,7 +29,7 @@
         <div class="page__content">
           <div class="page__text page__text--block">
             <div class="page__title-wrapper title--striped">
-              <h3 class="page__title color--grey">Mattis Bibendum Ipsum</h3>
+              <h3 class="page__title color--grey page__title--block">Mattis Bibendum Ipsum</h3>
             </div>
 
             <p>Curabitur blandit tempus porttitor. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor.</p>
@@ -51,7 +51,7 @@
         <div class="page__content">
           <div class="page__text page__text--block">
             <div class="page__title-wrapper title--striped">
-              <h3 class="page__title color--grey">Mattis Bibendum Ipsum</h3>
+              <h3 class="page__title color--grey page__title--block">Mattis Bibendum Ipsum</h3>
             </div>
 
             <p>Curabitur blandit tempus porttitor. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor.</p>
@@ -73,7 +73,7 @@
         <div class="page__content">
           <div class="page__text page__text--block">
             <div class="page__title-wrapper title--striped">
-              <h3 class="page__title color--grey">Mattis Bibendum Ipsum</h3>
+              <h3 class="page__title color--grey page__title--block">Mattis Bibendum Ipsum</h3>
             </div>
 
             <p>Curabitur blandit tempus porttitor. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor.</p>

@@ -975,7 +975,7 @@ body {
 }
 .footer .container {
   position: relative;
-  z-index: 10;
+  z-index: 4;
 }
 
 .footer__outer {
@@ -1035,6 +1035,8 @@ body {
 .input--footer {
   width: 100%;
   margin-bottom: 30px;
+  position: relative;
+  z-index: 3;
 }
 
 .submit--footer {

@@ -1,3 +1,100 @@
 /* ========================================================================== *\
    Menu
 \* ========================================================================== */
+
+.menu--main-desktop {
+  display: none;
+}
+
+.menu-toggler {
+  display: block;
+  width: 31px;
+  height: 31px;
+  position: relative;
+}
+
+.menu-toggler-wrapper {
+  float: right;
+  margin: 17px 9px 0 0;
+}
+
+.hamburger-stripe, .close-stripe {
+  background-color: $color-red;
+  display: block;
+  width: 31px;
+  height: 4px;
+}
+
+.close-stripe {
+  margin-left: -16px;
+  margin-top: -2px;
+  position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.hamburger-stripe--2 {
+  margin-top: 5px;
+}
+
+.hamburger-stripe--3 {
+  margin-top: 5px;
+}
+
+.close-stripe--1 {
+  transform: rotate(45deg);
+}
+
+.close-stripe--2 {
+  transform: rotate(-45deg);
+}
+
+.menu--main-mobile {
+  border-top: solid 4px #fff;
+  background-color: #fff;
+  width: 320px;
+  height: 100%;
+  transition: all 0.35s ease;
+  position: fixed;
+    top: 0;
+    right: -320px;
+  z-index: 10;
+
+  .menu--opened & {
+    right: 0;
+  }
+}
+
+.menu__list--mobile {
+  border-bottom: solid 4px $color-red;
+  font-family: $font-titles;
+  font-weight: bold;
+  list-style: none;
+  clear: both;
+  margin: 0 -10px;
+  padding-top: 80px;
+
+  .menu__item {
+    border-top: solid 4px $color-red;
+  }
+
+  .menu__link {
+    background-color: #fff;
+    display: block;
+    text-decoration: none;
+    line-height: 53px;
+    font-size: 43px;
+    text-spacing: 10px;
+    padding: 10px 36px;
+
+    &:hover, &:focus, &:active {
+      background-color: $color-red-light;
+      color: #fff;
+    }
+
+    &.menu--active {
+      background-color: $color-red;
+      color: #fff;
+    }
+  }
+}

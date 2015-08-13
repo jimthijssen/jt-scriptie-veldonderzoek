@@ -232,6 +232,15 @@ body {
   line-height: 25px;
   min-width: 320px;
 }
+body.menu--opened:after {
+  content: '';
+  background-color: rgba(250, 250, 251, 0.78);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 
 .container {
   padding: 0 10px;
@@ -497,9 +506,167 @@ body {
 /* ========================================================================== *\
    Header
 \* ========================================================================== */
+.header {
+  border-top: solid 4px #DA2E3C;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.64)), color-stop(100%, transparent));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.64) 0%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.64) 0%, transparent 100%);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  min-height: 60px;
+}
+
+.header__logo {
+  float: left;
+  margin-top: 7px;
+  padding-bottom: 0;
+}
+
+.header__logo--mobile {
+  margin-left: 26px;
+}
+
+.logo__img {
+  width: 157px;
+  height: 38px;
+}
+
+.header__banner {
+  background: url("../img/header-img.png") no-repeat 50% 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 240px;
+}
+
+.search_form {
+  position: relative;
+  max-width: 380px;
+  margin: 0 auto;
+  padding-right: 125px;
+}
+.search_form .input__search, .search_form .input__submit {
+  line-height: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.search_form .input__search {
+  font-size: 13px;
+  border-color: #DA2E3C;
+  background-color: #fff;
+  width: 100%;
+}
+.search_form .input__submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.banner_search {
+  padding: 170px 10px 0;
+}
+
 /* ========================================================================== *\
    Menu
 \* ========================================================================== */
+.menu--main-desktop {
+  display: none;
+}
+
+.menu-toggler {
+  display: block;
+  width: 31px;
+  height: 31px;
+  position: relative;
+}
+
+.menu-toggler-wrapper {
+  float: right;
+  margin: 17px 9px 0 0;
+}
+
+.hamburger-stripe, .close-stripe {
+  background-color: #DA2E3C;
+  display: block;
+  width: 31px;
+  height: 4px;
+}
+
+.close-stripe {
+  margin-left: -16px;
+  margin-top: -2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.hamburger-stripe--2 {
+  margin-top: 5px;
+}
+
+.hamburger-stripe--3 {
+  margin-top: 5px;
+}
+
+.close-stripe--1 {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.close-stripe--2 {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.menu--main-mobile {
+  border-top: solid 4px #fff;
+  background-color: #fff;
+  width: 320px;
+  height: 100%;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  position: fixed;
+  top: 0;
+  right: -320px;
+  z-index: 10;
+}
+.menu--opened .menu--main-mobile {
+  right: 0;
+}
+
+.menu__list--mobile {
+  border-bottom: solid 4px #DA2E3C;
+  font-family: "Nexa", Arial, sans-serif;
+  font-weight: bold;
+  list-style: none;
+  clear: both;
+  margin: 0 -10px;
+  padding-top: 80px;
+}
+.menu__list--mobile .menu__item {
+  border-top: solid 4px #DA2E3C;
+}
+.menu__list--mobile .menu__link {
+  background-color: #fff;
+  display: block;
+  text-decoration: none;
+  line-height: 53px;
+  font-size: 43px;
+  text-spacing: 10px;
+  padding: 10px 36px;
+}
+.menu__list--mobile .menu__link:hover, .menu__list--mobile .menu__link:focus, .menu__list--mobile .menu__link:active {
+  background-color: #F5223B;
+  color: #fff;
+}
+.menu__list--mobile .menu__link.menu--active {
+  background-color: #DA2E3C;
+  color: #fff;
+}
+
 /* ========================================================================== *\
    Homepage
 \* ========================================================================== */
@@ -521,11 +688,12 @@ body {
    Min 768px
 \* ========================================================================== */
 @media only screen and (min-width: 768px) {
-  /* ========================================================================== *\
-     Base
-  \* ========================================================================== */
-  .container {
-    padding: 0 25px;
+  .header__banner {
+    height: 430px;
+  }
+
+  .banner_search {
+    padding-top: 330px;
   }
 }
 /* ========================================================================== *\
@@ -535,6 +703,87 @@ body {
   /* ========================================================================== *\
      Base
   \* ========================================================================== */
+  .container {
+    padding: 0 25px;
+  }
+
+  .menu-toggler-wrapper {
+    display: none;
+  }
+
+  .menu--main-desktop {
+    display: block;
+  }
+
+  .menu__list--main {
+    list-style: none;
+    padding-top: 30px;
+  }
+
+  .menu__item--main {
+    display: inline-block;
+    padding: 0 20px;
+  }
+  .menu__item--main:first-child {
+    padding-left: 0;
+  }
+  .menu__item--main:last-child {
+    padding-right: 0;
+  }
+
+  .menu__link--main {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Nexa", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 2.3px;
+    text-transform: uppercase;
+    padding-left: 20px;
+    position: relative;
+  }
+  .menu__link--main:hover, .menu__link--main:focus {
+    color: #F5223B;
+  }
+  .menu__link--main:hover:before, .menu__link--main:focus:before {
+    background-image: url("../img/icon-home-hover.png");
+  }
+  .menu__link--main.menu--active {
+    color: #DA2E3C;
+  }
+  .menu__link--main.menu--active:before {
+    background-image: url("../img/icon-home.png");
+  }
+  .menu__link--main:before {
+    content: '';
+    display: block;
+    background: url("../img/icon-home-default.png") no-repeat 50% 50%;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+  }
+
+  /* ========================================================================== *\
+     Header
+  \* ========================================================================== */
+  .header {
+    background: rgba(50, 50, 50, 0.5);
+    height: 85px;
+  }
+
+  .header__logo {
+    float: right;
+    margin-top: 10px;
+    margin-right: 16px;
+  }
+
+  .logo__img {
+    width: 217px;
+    height: 53px;
+  }
 }
 /* ========================================================================== *\
    IE Specific

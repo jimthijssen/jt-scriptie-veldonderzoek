@@ -27,7 +27,7 @@
 \* ========================================================================== */
 
 @media only screen and (min-width: 768px) {
-  @import "min-768/_base.scss";
+  @import "min-768/_header.scss";
 }
 
 /* ========================================================================== *\
@@ -36,6 +36,8 @@
 
 @media only screen and (min-width: 960px) {
   @import "min-960/_base.scss";
+  @import "min-960/_menu.scss";
+  @import "min-960/_header.scss";
 }
 
 @import "ie.scss";

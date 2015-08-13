@@ -22,6 +22,18 @@ body {
   font-size: $fontsize-base;
   line-height: $lineheight-base;
   min-width: 320px;
+
+  &.menu--opened {
+    &:after {
+      content: '';
+      background-color: rgba(#FAFAFB, 0.78);
+      width: 100%;
+      height: 100%;
+      position: fixed;
+        top: 0;
+        left: 0;
+    }
+  }
 }
 
 .container {
